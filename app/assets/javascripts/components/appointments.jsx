@@ -14,9 +14,9 @@ var Appointments = React.createClass({
 
 	handleFormSubmit: function(){
 		var appointment = { title: this.state.title, apt_time: this.state.apt_time}
-		$.post('/appointments', {appointment: appointment})
-		.done( function(data){
-			this.addNewAppointment(data);
+		axios.post('/appointments', {appointment: appointment})
+		.then(function(response){
+			this.addNewAppointment(response.data);
 		}.bind(this));
 	},
 
@@ -29,7 +29,7 @@ var Appointments = React.createClass({
 		return(
 			<div>
 				< AppointmentForm title={this.state.title} apt_time={this.state.apt_time} onUserInput={this.handleUserInput}  onFormSubmit={this.handleFormSubmit} />
-				< AppointmentsList appointments = {this.state.appointments} />
+				< AppointmentsList appointments = {this.state.appointments} updateAppointment = {this.addNewAppointment}	/>
 			</div>
 		)
 	}
