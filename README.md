@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 5 app using axios to handle HTTP requests, React library and more...
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Following this Learnetto tutorial: [The Free React on Rails 5 course](https://learnetto.com/users/hrishio/courses/the-free-react-on-rails-5-course)
