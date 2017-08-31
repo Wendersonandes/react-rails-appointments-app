@@ -18,6 +18,7 @@
 //= require moment-with-locales
 //= require react-datetime.min
 //= require lodash
+//= require axios
 //= require utils
 //= require components
 //= require_tree .
