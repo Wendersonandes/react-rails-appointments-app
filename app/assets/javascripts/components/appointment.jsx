@@ -41,6 +41,10 @@ var Appointment = React.createClass({
 		}.bind(this));
 	},
 
+	handleRemove: function(){
+		this.props.onDelete(this.state.id)
+	},
+
 	render_edit: function(){
 		var inputProps = {
 			name: 'apt_time'
@@ -63,6 +67,7 @@ var Appointment = React.createClass({
 				<h3>{this.state.title}</h3>
 				<p>{formatDate(this.state.apt_time)}</p>
 				<button onClick={this.handleEdit}>Edit</button>
+				<button onClick={this.handleRemove}>Remove</button>
 			</div>
 		);
 	},
